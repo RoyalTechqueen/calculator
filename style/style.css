@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: block;
+    margin: auto;
+    width: 60vw;
+    height: 75vh;
+    margin-top: 20px;
+    background-color: purple;
+    box-shadow:  -5px 10px   #C8A2C8;
+    border-right: 10px #C8A2C8;
+    display: grid;
+    padding: 15px;
+}
+.head{
+    padding-left: 10px;
+    color: white;
+}
+.head p{
+    text-align: right;
+    font-size: 12px;
+}
+.display{
+    grid-column: 1 / -1;
+    border-radius: 30px;
+    width: 100%;
+    height: 70px;
+    cursor: text;
+}
+.main-buttons{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+}
+.first{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    padding: 5px;
+}
+#big-circle{
+    grid-column: span 2;
+    grid-row: span 2;
+    border-radius: 30%;
+}
+button{
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    background-color: plum;
+    border-radius: 40%;
+}
+button:hover{
+    background-color:pink ;
+}
+@media screen  and (min-width:768px) {
+    .display{
+        grid-row: 1/-1;
+    }
+    .buttons .first #big-circle{
+        grid-row: span 2;
+        grid-column:  span 2;
+        min-width: 100%; 
+        min-height: 100%;     
+    }
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        padding: 5px;
+    }
+    .buttons button{
+        width: 65px;
+        height: 60px;
+    }
+
+    button{
+        border-radius: 20%;
+    }
+    
+}
